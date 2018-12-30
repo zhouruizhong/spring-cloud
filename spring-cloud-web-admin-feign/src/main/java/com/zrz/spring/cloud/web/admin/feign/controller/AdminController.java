@@ -1,6 +1,6 @@
-package com.zrz.spring.cloud.web.admin.ribbon.controller;
+package com.zrz.spring.cloud.web.admin.feign.controller;
 
-import com.zrz.spring.cloud.web.admin.ribbon.service.AdminService;
+import com.zrz.spring.cloud.web.admin.feign.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author 周瑞忠
- * @date 2018/12/30 15:29
+ * @description java类作用描述
+ * @date 2018/12/30 23:50
  */
-
 @RestController
 public class AdminController {
 
@@ -19,7 +19,7 @@ public class AdminController {
     private AdminService adminService;
 
     @RequestMapping(value = "hi", method = RequestMethod.GET)
-    public String sayHi(@RequestParam String message){
+    public String sayHi(@RequestParam String message) {
         return adminService.sayHi(message);
     }
 

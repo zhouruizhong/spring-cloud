@@ -19,7 +19,7 @@ public class AdminController {
     private int port;
 
     @RequestMapping(value = "hi", method = RequestMethod.GET)
-    public String sayHi(@RequestParam(value = "message") String message){
+    public String sayHi(@RequestParam String message){
         return String.format("Hi，your message is : %s i am from port : %s", message, port);
     }
 

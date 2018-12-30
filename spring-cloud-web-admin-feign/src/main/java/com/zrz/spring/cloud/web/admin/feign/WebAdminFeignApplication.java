@@ -1,25 +1,25 @@
-package com.zrz.spring.cloud.web.admin.ribbon;
+package com.zrz.spring.cloud.web.admin.feign;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- *
- * 通过 @EnableDiscoveryClient 注解注册到服务中心
  * @author 周瑞忠
- * @date 2018/12/30 15:12
+ * @description java类作用描述
+ * @date 2018/12/30 23:47
  */
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableHystrix
+@EnableFeignClients
 @EnableHystrixDashboard
-public class WebAdminRibbonApplication {
+public class WebAdminFeignApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebAdminRibbonApplication.class, args);
+        SpringApplication.run(WebAdminFeignApplication.class, args);
     }
+
 }
