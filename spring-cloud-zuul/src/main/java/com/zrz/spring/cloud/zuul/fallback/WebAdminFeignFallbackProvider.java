@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  *
- * 路由 hello-spring-cloud-web-admin-feign 失败时的回调
+ * 路由 spring-cloud-web-admin-feign 失败时的回调
  * @author 周瑞忠
  * @date 2018/12/31 1:31
  */
@@ -26,7 +26,7 @@ public class WebAdminFeignFallbackProvider implements FallbackProvider {
     @Override
     public String getRoute() {
         // ServiceId，如果需要所有调用都支持回退，则 return "*" 或 return null
-        return "hello-spring-cloud-web-admin-feign";
+        return "spring-cloud-web-admin-feign";
     }
 
     /**

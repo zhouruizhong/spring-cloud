@@ -67,7 +67,8 @@ public class LoginFilter extends ZuulFilter{
             context.setSendZuulResponse(false);
             context.setResponseStatusCode(401);
             try {
-                context.getResponse().getWriter().write("Token is empty");
+                context.getResponse().setContentType("text/html,");
+                context.getResponse().getWriter().write("非法请求");
             } catch (IOException e) {
             }
         } else {
